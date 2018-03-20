@@ -1,0 +1,1558 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/QAPage">
+
+    <head>
+
+        <title>How do I import a pre-existing Java project into Eclipse and get up and running? - Stack Overflow</title>
+        <link rel="shortcut icon" href="https://cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico?v=4f32ecc8f43d">
+        <link rel="apple-touch-icon image_src" href="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png?v=c78bd457575a">
+        <link rel="search" type="application/opensearchdescription+xml" title="Stack Overflow" href="/opensearch.xml">
+
+
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="https://stackoverflow.com/questions/142863/how-do-i-import-a-pre-existing-java-project-into-eclipse-and-get-up-and-running"/>
+        <meta property="og:image" itemprop="image primaryImageOfPage" content="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded" />
+        <meta name="twitter:card" content="summary"/>
+        <meta name="twitter:domain" content="stackoverflow.com"/>
+        <meta name="twitter:title" property="og:title" itemprop="title name" content="How do I import a pre-existing Java project into Eclipse and get up and running?" />
+        <meta name="twitter:description" property="og:description" itemprop="description" content="Comment on Duplicate Reference: Why would this be marked duplicate when it was asked years prior to the question referenced as a duplicate?  I also believe the question, detail, and response is much " />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://cdn.sstatic.net/Js/stub.en.js?v=d5e62e18638a"></script>
+    
+    <link rel="stylesheet" type="text/css" href="https://cdn.sstatic.net/Shared/stacks.css?v=596945d5421b">
+
+        <link rel="stylesheet" type="text/css" href="https://cdn.sstatic.net/Sites/stackoverflow/primary.css?v=94cd993a63cf">
+    
+            <meta name="twitter:app:country" content="US" />
+            <meta name="twitter:app:name:iphone" content="Stack Exchange iOS" />
+            <meta name="twitter:app:id:iphone" content="871299723" />
+            <meta name="twitter:app:url:iphone" content="se-zaphod://stackoverflow.com/questions/142863/how-do-i-import-a-pre-existing-java-project-into-eclipse-and-get-up-and-running" />
+            <meta name="twitter:app:name:ipad" content="Stack Exchange iOS" />
+            <meta name="twitter:app:id:ipad" content="871299723" />
+            <meta name="twitter:app:url:ipad" content="se-zaphod://stackoverflow.com/questions/142863/how-do-i-import-a-pre-existing-java-project-into-eclipse-and-get-up-and-running" />
+            <meta name="twitter:app:name:googleplay" content="Stack Exchange Android">
+            <meta name="twitter:app:url:googleplay" content="http://stackoverflow.com/questions/142863/how-do-i-import-a-pre-existing-java-project-into-eclipse-and-get-up-and-running">
+            <meta name="twitter:app:id:googleplay" content="com.stackexchange.marvin">
+        <script>
+
+            StackExchange.ready(function () {
+                                    
+                    StackExchange.using("snippets", function () {
+                        StackExchange.snippets.initSnippetRenderer();
+                    });
+                    
+
+                StackExchange.using("postValidation", function () {
+                    StackExchange.postValidation.initOnBlurAndSubmit($('#post-form'), 2, 'answer');
+                });
+
+                
+                StackExchange.question.init({showAnswerHelp:true,totalCommentCount:0,shownCommentCount:0,highlightColor:'#F4A83D',backgroundColor:'#FFF',questionId:142863});
+
+                styleCode();
+
+                    StackExchange.realtime.subscribeToQuestion('1', '142863');
+                // TODO: There's a CR for replacing this with inline info on the question for moderators
+                // https://trello.com/c/ynDHhvrB/158-cr-move-the-mod-info-out-of-the-margin-and-into-the-post-estimate-needed
+                // Before we roll out the sidebar everywhere (or at least shortly after that?), we should implement it.
+                                                    StackExchange.using("gps", function () { StackExchange.gps.trackOutboundClicks('#content', '.post-text'); });
+
+            });
+        </script>
+
+        
+        
+        
+        
+        
+             
+        
+                <script>
+        StackExchange.init({"locale":"en","serverTime":1521550752,"routeName":"Questions/Show","stackAuthUrl":"https://stackauth.com","networkMetaHostname":"meta.stackexchange.com","site":{"name":"Stack Overflow","description":"Q&A for professional and enthusiast programmers","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdchgIAAAAAAJwGpIzRQSOFaO0pU6s44Xt8aTwc","recaptchaAudioLang":"en","enableNewTagCreationWarning":true,"insertSpaceAfterNameTabCompletion":false,"id":1,"childUrl":"https://meta.stackoverflow.com","enableSocialMediaInSharePopup":true,"protocol":"https"},"user":{"fkey":"64a2c88e6df935ae491bdd466d1570b12d4a2c03c2ee97d75ca8c32ca2ac454c","tid":"60bd7442-c14b-31da-4ffd-1ea77814112e","rep":0,"isAnonymous":true,"isAnonymousNetworkWide":true,"canSeeNewHeaderDesign":true},"events":{"postType":{"question":1},"postEditionSection":{"title":1,"body":2,"tags":3}},"story":{"minCompleteBodyLength":75,"likedTagsMaxLength":300,"dislikedTagsMaxLength":300},"jobPreferences":{"maxNumDeveloperRoles":2,"maxNumIndustries":4}}, {"site":{"allowImageUploads":true,"commentHighlightingWithCSS":true,"enableUserHovercards":true,"styleCode":true,"enableImgurHttps":true,"forceHttpsImages":true},"comments":{},"userProfile":{"openGraphAPIKey":"58740831ad23540e00c58987"},"tags":{},"accounts":{"currentPasswordRequiredForChangingStackIdPassword":true},"flags":{"allowRetractingFlags":true},"topBar":{"showNewFeatureNotice":true},"snippets":{"snippetsEnabled":true,"renderDomain":"stacksnippets.net"},"paths":{},"markdown":{"asteriskIntraWordEmphasis":true},"monitoring":{"clientTimingsAbsoluteTimeout":30000,"clientTimingsDebounceTimeout":1000},"slack":{"sidebarAdDismissCookie":"slack-sidebar-ad"},"subscriptions":{}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"5fbf37d096d1","js/moderator.en.js":"1a3d30311be0","js/full-anon.en.js":"516dfa433247","js/full.en.js":"5c3735406271","js/wmd.en.js":"bdcd031f86d0","js/third-party/jquery.autocomplete.min.js":"bdb258e949a8","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"f33dcdac10d2","js/help.en.js":"ce2977cf4348","js/tageditor.en.js":"ea9fc738c402","js/tageditornew.en.js":"b0713607038e","js/inline-tag-editing.en.js":"e7aa31e8eba1","js/revisions.en.js":"8f22ba768cac","js/review.en.js":"d4c2d6b701da","js/tagsuggestions.en.js":"78eee7c19ab2","js/post-validation.en.js":"94b15b1f30b1","js/explore-qlist.en.js":"d35e253e2f03","js/events.en.js":"f70d76783bb1","js/keyboard-shortcuts.en.js":"3793c373d11a","js/external-editor.en.js":"bd3073c45fe4","js/adops.en.js":"22a9bd59b1e9","js/external-editor.en.js":"bd3073c45fe4","js/snippet-javascript.en.js":"0d8955a691c8","js/snippet-javascript-codemirror.en.js":"793363645454"});
+        StackExchange.using("gps", function() {
+             StackExchange.gps.init(true);
+        });
+    </script>
+    <noscript id="noscript-css"><style>body,.top-bar{margin-top:1.9em}</style></noscript>
+    </head>
+    <body class="question-page new-topbar">
+        <script async src="https://js-sec.indexww.com/ht/p/185901-159836282584097.js"></script>
+
+    <div id="notify-container"></div>
+    <div id="custom-header"></div>
+
+
+
+
+<header class="top-bar js-top-bar _fixed">
+    <div class="-container">
+        <div class="-main">
+                                <a href="https://stackoverflow.com" class="-logo js-gps-track"
+                        data-gps-track="top_nav.click({is_current:false, location:2, destination:8})">
+                        <span class="-img">Stack Overflow.NameWithoutStackExchange</span>
+                    </a>
+
+
+                <nav class="navigation" role="navigation" aria-label="site navigation">
+                    <ol class="-list">
+        <li class="-item _current">
+            <a id="nav-questions" href="/questions" class="-link js-gps-track"
+               data-gps-track="top_nav.click({is_current:true, location:2, destination:1})">Questions</a>
+        </li>
+        <li class="-item">
+            <a id="nav-jobs" href="/jobs?med=site-ui&amp;ref=jobs-tab" class="-link js-gps-track"
+               data-gps-track="top_nav.click({is_current:false, location:2, destination:6})">Developer Jobs</a>
+        </li>
+        <li class="-item">
+            <a id="nav-tags" href="/tags" class="-link js-gps-track"
+               data-gps-track="top_nav.click({is_current:false, location:2, destination:2})">Tags</a>
+        </li>
+        <li class="-item">
+            <a id="nav-users" href="/users" class="-link js-gps-track"
+               data-gps-track="top_nav.click({is_current:false, location:2, destination:3})">Users</a>
+        </li>
+                    </ol>
+                </nav>
+
+        </div>
+
+            <form id="search" action="/search" method="get" class="searchbar" autocomplete="off" role="search">
+                    <input name="q" type="text" placeholder="Search…" value="" tabindex="1" autocomplete="off" maxlength="240" class="f-input js-search-field" />
+                    <button type="submit" aria-label="Search..." class="btn-topbar-primary js-search-submit"><svg aria-hidden="true" class="svg-icon iconSearch" width="18" height="18" viewBox="0 0 18 18"><path d="M12.86 11.32L18 16.5 16.5 18l-5.18-5.14v-.35a7 7 0 1 1 1.19-1.19h.35zM7 12A5 5 0 1 0 7 2a5 5 0 0 0 0 10z"/></svg></button>
+            </form>
+
+        
+
+
+    
+
+<div class="-actions">
+    <nav class="secondary-nav">
+        <div class="-dialog-container js-topbar-dialog-corral">
+
+
+    <div class="topbar-dialog siteSwitcher-dialog dno">
+        <div class="header">
+            <h3><a href="https://stackoverflow.com">current community</a>
+            </h3>
+        </div>
+        <div class="modal-content current-site-container">
+            <ul class="current-site">
+                    <li>
+                            <div class="related-links">
+            <a href="https://stackoverflow.com/help" class="js-gps-track"     data-gps-track="site_switcher.click({ item_type:14 })"
+>help</a>
+                    <a href="https://chat.stackoverflow.com" class="js-gps-track"     data-gps-track="site_switcher.click({ item_type:6 })"
+>chat</a>
+            </div>
+    <a href="https://stackoverflow.com"
+       class="current-site-link site-link js-gps-track"
+       data-id="1"
+       data-gps-track="site_switcher.click({ item_type:3 })">
+        <div class="favicon favicon-stackoverflow site-icon" title="Stack Overflow"></div>
+        Stack Overflow
+    </a>
+
+                    </li>
+                    <li class="related-site">
+                            <div class="L-shaped-icon-container">
+        <span class="L-shaped-icon"></span>
+    </div>
+
+                            <a href="https://meta.stackoverflow.com"
+       class="site-link js-gps-track"
+       data-id="552"
+       data-gps-track="site.switch({ target_site:552, item_type:3 }),site_switcher.click({ item_type:4 })">
+        <div class="favicon favicon-stackoverflowmeta site-icon" title="Meta Stack Overflow"></div>
+        Meta Stack Overflow
+    </a>
+
+                    </li>
+            </ul>
+        </div>
+
+        <div class="header" id="your-communities-header">
+            <h3>
+your communities            </h3>
+
+        </div>
+        <div class="modal-content" id="your-communities-section">
+
+                <div class="call-to-login">
+<a href="https://stackoverflow.com/users/signup?ssrc=site_switcher&amp;returnurl=%2fusers%2fstory%2fcurrent" class="login-link js-gps-track"     data-gps-track="site_switcher.click({ item_type:10 })"
+>Sign up</a> or <a href="https://stackoverflow.com/users/login?ssrc=site_switcher&amp;returnurl=https%3a%2f%2fstackoverflow.com%2fquestions%2f142863%2fhow-do-i-import-a-pre-existing-java-project-into-eclipse-and-get-up-and-running" class="login-link js-gps-track"     data-gps-track="site_switcher.click({ item_type:11 })"
+>log in</a> to customize your list.
+                </div>
+        </div>
+
+        <div class="header">
+            <h3><a href="https://stackexchange.com/sites">more stack exchange communities</a>
+            </h3>
+            <a href="https://stackoverflow.blog" class="fr">company blog</a>
+        </div>
+        <div class="modal-content">
+                <div class="child-content"></div>
+        </div>        
+    </div>
+                <div class="topbar-dialog help-dialog js-help-dialog dno">
+        <div class="modal-content">
+            <ul>
+                                    <li>
+                        <a href="/tour" class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })">
+                            Tour
+                            <span class="item-summary">
+                                Start here for a quick overview of the site
+                            </span>
+                        </a>
+                    </li>
+                <li>
+                    <a href="/help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })">
+                        Help Center
+                        <span class="item-summary">
+                            Detailed answers to any questions you might have
+                        </span>
+                    </a>
+                </li>
+                        <li>
+                            <a href="https://meta.stackoverflow.com" class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })">
+                                Meta
+                                <span class="item-summary">
+                                    Discuss the workings and policies of this site
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://stackoverflow.com/company/about" class="js-gps-track" data-gps-track="help_popup.click({ item_type:6 })">
+                                About Us
+                                <span class="item-summary">
+                                    Learn more about Stack Overflow the company
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.stackoverflowbusiness.com/?ref=topbar_help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:7 })">
+                                Business
+                                <span class="item-summary">
+                                    Learn more about hiring developers or posting ads with us
+                                </span>
+                            </a>
+                        </li>
+            </ul>
+        </div>
+    </div>
+        </div>
+        <ol class="-list">
+    <li class="-item">
+        <a href="https://stackexchange.com/users/?tab=inbox" class="-link js-inbox-button" title="Recent inbox messages">
+            <svg aria-hidden="true" class="svg-icon iconInbox" width="20" height="18" viewBox="0 0 20 18"><path d="M15.19 1H4.63c-.85 0-1.6.54-1.85 1.35L0 10.79V15c0 1.1.9 2 2 2h16a2 2 0 0 0 2-2v-4.21l-2.87-8.44A2 2 0 0 0 15.19 1zm-.28 10l-2 2h-6l-2-2H1.96L4.4 3.68A1 1 0 0 1 5.35 3h9.12a1 1 0 0 1 .95.68L17.86 11h-2.95z"/></svg>
+            <span class="indicator-badge js-unread-count _important" style="display: none;"></span>
+        </a>
+    </li>
+    <li class="-item">
+        <a href="https://stackexchange.com/users/?tab=reputation" class="-link js-achievements-button" title="Recent achievements: reputation, badges, and privileges earned" data-unread-class="_highlighted-positive">
+            <svg aria-hidden="true" class="svg-icon iconAchievements" width="18" height="18" viewBox="0 0 18 18"><path d="M15 2V1H3v1H0v4c0 1.6 1.4 3 3 3v1c.4 1.5 3 2.6 5 3v2H5s-1 1.5-1 2h10c0-.4-1-2-1-2h-3v-2c2-.4 4.6-1.5 5-3V9c1.6-.2 3-1.4 3-3V2h-3zM3 7c-.5 0-1-.5-1-1V4h1v3zm8.4 2.5L9 8 6.6 9.4l1-2.7L5 5h3l1-2.7L10 5h2.8l-2.3 1.8 1 2.7h-.1zM16 6c0 .5-.5 1-1 1V4h1v2z"/></svg>
+            <span class="indicator-badge js-unread-count _positive" style="display: none;"></span>
+        </a>
+    </li>
+
+    <li class="-item"><a href="#" class="-link js-help-button" title="Help Center and other resources">
+        <svg aria-hidden="true" class="svg-icon iconHelp" width="18" height="18" viewBox="0 0 18 18"><path d="M9 1a8 8 0 1 0 0 16A8 8 0 0 0 9 1zm.81 12.13c-.02.71-.55 1.15-1.24 1.13-.66-.02-1.17-.49-1.15-1.2.02-.72.56-1.18 1.22-1.16.7.03 1.2.51 1.17 1.23zM11.77 8a5.8 5.8 0 0 1-1.02.91l-.53.37c-.26.2-.42.43-.5.69a4 4 0 0 0-.09.75c0 .05-.03.16-.18.16H7.88c-.16 0-.18-.1-.18-.15.03-.66.12-1.21.4-1.66a5.29 5.29 0 0 1 1.43-1.22c.16-.12.28-.25.38-.39a1.34 1.34 0 0 0 .02-1.71c-.24-.31-.51-.46-1.03-.46-.51 0-.8.26-1.02.6-.21.33-.18.73-.18 1.1H5.75c0-1.38.35-2.25 1.1-2.76.52-.35 1.17-.5 1.93-.5 1 0 1.79.18 2.49.71.64.5.98 1.18.98 2.12 0 .57-.2 1.05-.48 1.44z"/></svg>
+    </a></li>
+
+    <li class="-item">
+        <a href="https://stackexchange.com" class="-link js-site-switcher-button js-gps-track" data-gps-track="site_switcher.show" title="A list of all 172 Stack Exchange sites">
+            <svg aria-hidden="true" class="svg-icon iconStackExchange" width="18" height="18" viewBox="0 0 18 18"><path d="M1 13c0 1.1.9 2 2 2h8v3l3-3h1a2 2 0 0 0 2-2v-2H1v2zM15 1H3a2 2 0 0 0-2 2v2h16V3a2 2 0 0 0-2-2zM1 6h16v4H1V6z"/></svg>
+        </a>
+    </li>
+        </ol>
+    </nav>
+            <div class="-ctas">
+                        <a href="https://stackoverflow.com/users/login?ssrc=head&returnurl=https%3a%2f%2fstackoverflow.com%2fquestions%2f142863%2fhow-do-i-import-a-pre-existing-java-project-into-eclipse-and-get-up-and-running" class="login-link btn-clear" rel="nofollow">Log In</a>
+                        <a href="https://stackoverflow.com/users/signup?ssrc=head&returnurl=%2fusers%2fstory%2fcurrent" class="login-link btn-topbar-primary" rel="nofollow" data-ga="[&quot;Sign Up&quot;,&quot;Sign Up Navigation&quot;,&quot;Header&quot;,null,null]">Sign Up</a>
+
+            </div>
+</div>
+
+    </div>
+</header>
+
+    <script>
+        StackExchange.ready(function() { StackExchange.topbar.init(); });
+        StackExchange.scrollPadding.setPaddingTop(60, 10);     </script>
+
+
+<div id="announcement-banner" data-campaign="2018-03-13.dev-survey-2018" data-cookie="notice-dsr" data-end-date="1523520000000">
+    <div class="-container">
+        <span class="-body">The results are in!</span>
+        <a class="-link js-link js-gps-track" href="https://insights.stackoverflow.com/survey/2018/" data-ga="[&quot;dev-survey-2018&quot;,&quot;Announcement Banner&quot;,&quot;https://insights.stackoverflow.com/survey/2018/&quot;,null,{&quot;dimension4&quot;:&quot;dev-survey-2018&quot;}]"
+           data-gps-track="announcement_banner.click({campaign: '2018-03-13.dev-survey-2018', location: 2, action: 2})">See the 2018 Developer Survey results. &raquo;</a>
+        <a class="-dismiss js-dismiss js-gps-track" href="#" title="dismiss"
+           data-gps-track="announcement_banner.click({campaign: '2018-03-13.dev-survey-2018', location: 2, action: 1})"><svg aria-hidden="true" class="svg-icon iconClear" width="18" height="18" viewBox="0 0 18 18"><path d="M15 4.41L13.59 3 9 7.59 4.41 3 3 4.41 7.59 9 3 13.59 4.41 15 9 10.41 13.59 15 15 13.59 10.41 9z"/></svg></a>
+    </div>
+</div>
+<script>
+    StackExchange.ready(function () {
+        var $banner = $('#announcement-banner');
+
+        function setCookie(value) {
+            $.cookie($banner.data('cookie'), value, {
+                expires: (new Date($banner.data('end-date') + 86400000)),
+                path: '/'
+            });
+        }
+
+        $banner.find('.js-link').click(function () {
+            setCookie('2;' + Date.now());
+        });
+
+        $banner.find('.js-dismiss').click(function () {
+            setCookie('4;' + Date.now());
+            $banner.animate({ height: '0', opacity: 0 }, 'fast', 'linear', function () { $banner.remove(); });
+            return false;
+        });
+    });
+</script>
+
+    <div class="container _full ">
+        
+
+
+        <div id="content" class="snippet-hidden">
+
+
+            
+
+<div itemscope itemtype="http://schema.org/Question">
+    <link itemprop="image" href="https://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png?v=c78bd457575a">
+
+
+
+
+
+<div class="s-hero hero-container _fixed js-dismissable-hero" data-campaign-name="stk">
+    <div class="-container g-row jc-sp-between ai-center">
+        <div class="g-col6">
+            <p class="-title"><strong>Join Stack Overflow</strong> to learn, share knowledge, and build your career.</p>
+        </div>
+
+        <div class="s-signup _hero g-col6">
+            <div id="openid-buttons" class="-social">
+                <a class="btn-outlined -white _medium _block" href="/users/signup?ssrc=hero&returnurl=https%3a%2f%2fstackoverflow.com%2fquestions%2f142863%2fhow-do-i-import-a-pre-existing-java-project-into-eclipse-and-get-up-and-running" rel="nofollow" data-ga="[&quot;Sign Up&quot;,&quot;Sign Up Navigation&quot;,&quot;Question Hero&quot;,null,null]">Email Sign Up</a>
+                <span class="-or">or sign in with</span>
+                    <div class="major-provider btn _block _medium _google" data-provider='google' data-oauthserver='https://accounts.google.com/o/oauth2/auth' data-oauthversion='2.0'
+                         data-ga="[&quot;Sign Up&quot;,&quot;Sign Up Started - Google&quot;,&quot;Question Hero&quot;,null,null]">
+<svg aria-hidden="true" class="svg-icon native iconGoogle" width="18" height="18" viewBox="0 0 18 18"><g><path d="M16.51 8H8.98v3h4.3c-.18 1-.74 1.48-1.6 2.04v2.01h2.6a7.8 7.8 0 0 0 2.38-5.88c0-.57-.05-.66-.15-1.18z" fill="#4285F4"/><path d="M8.98 17c2.16 0 3.97-.72 5.3-1.94l-2.6-2a4.8 4.8 0 0 1-7.18-2.54H1.83v2.07A8 8 0 0 0 8.98 17z" fill="#34A853"/><path d="M4.5 10.52a4.8 4.8 0 0 1 0-3.04V5.41H1.83a8 8 0 0 0 0 7.18l2.67-2.07z" fill="#FBBC05"/><path d="M8.98 4.18c1.17 0 2.23.4 3.06 1.2l2.3-2.3A8 8 0 0 0 1.83 5.4L4.5 7.49a4.77 4.77 0 0 1 4.48-3.3z" fill="#EA4335"/></g></svg>                                                Google
+                    </div>
+                    <div class="major-provider btn _block _medium _facebook" data-provider='facebook' data-oauthserver='https://www.facebook.com/v2.0/dialog/oauth' data-oauthversion='2.0'
+                         data-ga="[&quot;Sign Up&quot;,&quot;Sign Up Started - Facebook&quot;,&quot;Question Hero&quot;,null,null]">
+                        <svg aria-hidden="true" class="svg-icon iconFacebook" width="18" height="18" viewBox="0 0 18 18"><path d="M1.88 1C1.4 1 1 1.4 1 1.88v14.24c0 .48.4.88.88.88h7.67v-6.2H7.46V8.4h2.09V6.61c0-2.07 1.26-3.2 3.1-3.2.88 0 1.64.07 1.87.1v2.16h-1.29c-1 0-1.19.48-1.19 1.18V8.4h2.39l-.31 2.42h-2.08V17h4.08c.48 0 .88-.4.88-.88V1.88c0-.48-.4-.88-.88-.88H1.88z" fill="#3C5A96"/></svg>                        Facebook
+                    </div>
+                                    <a id="close" href="#" class="js-dismiss js-hero-mini-disabled -dismiss" title="dismiss"><svg aria-hidden="true" class="svg-icon iconClear" width="18" height="18" viewBox="0 0 18 18"><path d="M15 4.41L13.59 3 9 7.59 4.41 3 3 4.41 7.59 9 3 13.59 4.41 15 9 10.41 13.59 15 15 13.59 10.41 9z"/></svg></a>
+            </div>
+
+            <form id="login-form" action="/users/signup?ssrc=hero&returnurl=https%3a%2f%2fstackoverflow.com%2fquestions%2f142863%2fhow-do-i-import-a-pre-existing-java-project-into-eclipse-and-get-up-and-running" method="POST">
+
+                <input type="hidden" name="fkey" value="64a2c88e6df935ae491bdd466d1570b12d4a2c03c2ee97d75ca8c32ca2ac454c">
+
+                <input type="hidden" name="ssrc" value="" />
+
+                <input type="hidden" id="oauth_version" name="oauth_version" />
+                <input type="hidden" id="oauth_server" name="oauth_server" />
+
+                <div id="se-login-fields">
+                    <input type="hidden" name="legalLinksShown" value="0" />
+                </div>
+            </form>
+            <script>
+                StackExchange.ready(function () {
+                    StackExchange.InlineAuth.init();
+                })
+            </script>
+        </div>
+    </div>
+</div><script>
+    StackExchange.ready(function () {
+
+        StackExchange.Hero.init("stk", "a");
+
+        var location = 0;
+        if ($("body").hasClass("questions-page")) {
+            location = 1;
+        } else if ($("body").hasClass("question-page")) {
+            location = 1;
+        } else if ($("body").hasClass("faq-page")) {
+            location = 5;
+        } else if ($("body").hasClass("home-page")) {
+            location = 3;
+        }
+
+        $('#tell-me-more').click(function () {
+            StackExchange.using("gps", function () {
+                StackExchange.gps.track("hero.action", { hero_action_type: 'cta', location: location }, true);
+            });
+        });
+
+        $('.js-dismissable-hero #close').click(function () {
+            StackExchange.using("gps", function () {
+                StackExchange.gps.track("hero.action", { hero_action_type: "minimize", location: location }, true);
+              });
+
+            StackExchange.Hero.dismiss();
+
+            $.ajax({
+                url: "/hero-mini",
+                success: function (data) {
+                    $(".js-dismissable-hero").fadeOut("fast", function () {
+                        $(".js-dismissable-hero").replaceWith(data);
+                        $("#herobox-mini").fadeIn("fast");
+                    });
+                }
+            });
+            return false;
+        });
+    });
+</script>    <div class="inner-content clearfix">
+        <div id="question-header">
+                    <h1 itemprop="name"><a href="/questions/142863/how-do-i-import-a-pre-existing-java-project-into-eclipse-and-get-up-and-running" class="question-hyperlink">How do I import a pre-existing Java project into Eclipse and get up and running? [duplicate]</a></h1>
+
+            
+<div class="aside-cta" role="navigation" aria-label="ask new question">
+        <a href="/questions/ask" class="btn-outlined" >Ask Question</a>
+</div>
+
+        </div>
+            <div id="mainbar" role="main" aria-label="question and answers">
+
+            
+
+<div class="question" data-questionid="142863"  id="question">
+
+    <div id="dfp-tlb" class="everyonelovesstackoverflow"></div>    
+    <div class="post-layout">
+            <div class="votecell post-layout--left">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="142863">
+        <a class="vote-up-off" title="This question shows research effort; it is useful and clear">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">22</span>
+        <a class="vote-down-off" title="This question does not show any research effort; it is unclear or not useful">down vote</a>
+
+        <a class="star-off" href="#">favorite</a>
+        <div class="favoritecount"><b>10</b></div>
+
+
+</div>
+
+            </div>
+
+            
+<div class="postcell post-layout--right">
+    <div class="post-text" itemprop="text">
+
+<div class="question-status question-originals-of-duplicate">
+    <p>This question already has an answer here:</p>
+    <ul>
+        <li>
+            <a href="/questions/11983088/how-to-import-a-java-project-to-eclipse" dir="ltr">How to import a Java project to Eclipse?</a>
+                <span class="question-originals-answer-count">
+                    7 answers
+                </span>
+        </li>
+    </ul>
+    </div>
+<p><em>Comment on Duplicate Reference: Why would this be marked duplicate when it was asked years prior to the question referenced as a duplicate?  I also believe the question, detail, and response is much better than the referenced question.</em></p>
+
+<p>I've been a C++ programmer for quite a while but I'm new to Java and new to Eclipse.  I want to use the <a href="http://sourceforge.net/project/showfiles.php?group_id=30469&amp;package_id=23976" rel="nofollow noreferrer">touch graph "Graph Layout" code</a> to visualize some data I'm working with.</p>
+
+<p>This code is organized like this:</p>
+
+<pre><code>./com
+./com/touchgraph
+./com/touchgraph/graphlayout
+./com/touchgraph/graphlayout/Edge.java
+./com/touchgraph/graphlayout/GLPanel.java
+./com/touchgraph/graphlayout/graphelements
+./com/touchgraph/graphlayout/graphelements/GESUtils.java
+./com/touchgraph/graphlayout/graphelements/GraphEltSet.java
+./com/touchgraph/graphlayout/graphelements/ImmutableGraphEltSet.java
+./com/touchgraph/graphlayout/graphelements/Locality.java
+./com/touchgraph/graphlayout/graphelements/TGForEachEdge.java
+./com/touchgraph/graphlayout/graphelements/TGForEachNode.java
+./com/touchgraph/graphlayout/graphelements/TGForEachNodePair.java
+./com/touchgraph/graphlayout/graphelements/TGNodeQueue.java
+./com/touchgraph/graphlayout/graphelements/VisibleLocality.java
+./com/touchgraph/graphlayout/GraphLayoutApplet.java
+./com/touchgraph/graphlayout/GraphListener.java
+./com/touchgraph/graphlayout/interaction
+./com/touchgraph/graphlayout/interaction/DragAddUI.java
+./com/touchgraph/graphlayout/interaction/DragMultiselectUI.java
+./com/touchgraph/graphlayout/interaction/DragNodeUI.java
+./com/touchgraph/graphlayout/interaction/GLEditUI.java
+./com/touchgraph/graphlayout/interaction/GLNavigateUI.java
+./com/touchgraph/graphlayout/interaction/HVRotateDragUI.java
+./com/touchgraph/graphlayout/interaction/HVScroll.java
+./com/touchgraph/graphlayout/interaction/HyperScroll.java
+./com/touchgraph/graphlayout/interaction/LocalityScroll.java
+./com/touchgraph/graphlayout/interaction/RotateScroll.java
+./com/touchgraph/graphlayout/interaction/TGAbstractClickUI.java
+./com/touchgraph/graphlayout/interaction/TGAbstractDragUI.java
+./com/touchgraph/graphlayout/interaction/TGAbstractMouseMotionUI.java
+./com/touchgraph/graphlayout/interaction/TGAbstractMousePausedUI.java
+./com/touchgraph/graphlayout/interaction/TGSelfDeactivatingUI.java
+./com/touchgraph/graphlayout/interaction/TGUIManager.java
+./com/touchgraph/graphlayout/interaction/TGUserInterface.java
+./com/touchgraph/graphlayout/interaction/ZoomScroll.java
+./com/touchgraph/graphlayout/LocalityUtils.java
+./com/touchgraph/graphlayout/Node.java
+./com/touchgraph/graphlayout/TGAbstractLens.java
+./com/touchgraph/graphlayout/TGException.java
+./com/touchgraph/graphlayout/TGLayout.java
+./com/touchgraph/graphlayout/TGLensSet.java
+./com/touchgraph/graphlayout/TGPaintListener.java
+./com/touchgraph/graphlayout/TGPanel.java
+./com/touchgraph/graphlayout/TGPoint2D.java
+./com/touchgraph/graphlayout/TGScrollPane.java
+./TG-APACHE-LICENSE.txt
+./TGGL ReleaseNotes.txt
+./TGGraphLayout.html
+./TGGraphLayout.jar
+</code></pre>
+
+<p>How do I add this project in Eclipse and get it compiling and running quickly?</p>
+    </div>
+    <div class="post-taglist">
+        <a href="/questions/tagged/java" class="post-tag" title="show questions tagged &#39;java&#39;" rel="tag">java</a> <a href="/questions/tagged/eclipse" class="post-tag" title="show questions tagged &#39;eclipse&#39;" rel="tag">eclipse</a> 
+    </div>
+    <div class="grid mb0 fw-wrap ai-start jc-end gs8 gsy">
+    <div class="grid--cell mr16" style="flex: 1 1 100px;">
+<div class="post-menu"><a href="/q/142863" title="short permalink to this question" class="short-link" id="link-post-142863">share</a><span class="lsep">|</span><a href="/posts/142863/edit" class="suggest-edit-post" title="">improve this question</a></div>        
+    </div>
+
+    <div class="post-signature grid--cell fl0">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="/posts/142863/revisions" title="show all edits to this post">edited <span title="2017-09-27 14:47:11Z" class="relativetime">Sep 27 '17 at 14:47</span></a>
+    </div>
+    <div class="user-gravatar32">
+        
+    </div>
+    <div class="user-details">
+        
+        <div class="-flair">
+            
+        </div>
+    </div>
+</div>    </div>
+    <div class="post-signature owner grid--cell fl0">
+        <div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2008-09-27 03:16:56Z" class="relativetime">Sep 27 '08 at 3:16</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/22917/jr-lawhorne"><div class="gravatar-wrapper-32"><img src="https://i.stack.imgur.com/8bWlB.jpg?s=32&amp;g=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/22917/jr-lawhorne">JR Lawhorne</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">1,708</span><span title="4 gold badges"><span class="badge1"></span><span class="badgecount">4</span></span><span title="17 silver badges"><span class="badge2"></span><span class="badgecount">17</span></span><span title="32 bronze badges"><span class="badge3"></span><span class="badgecount">32</span></span>
+        </div>
+    </div>
+</div>
+    </div>
+    </div>
+</div>
+
+                        <div class="special-status post-layout--full">
+                <div class="question-status">
+        <h2>                    <b>marked</b> as duplicate by <a href="/users/8200937/glytching">glytching</a>, <a href="/users/2194470/szymon-stepniak">Szymon Stepniak</a>, <a href="/users/1688439/owen-pauling">Owen Pauling</a>, <a href="/users/511529/goleztrol">GolezTrol</a>, <a href="/users/3179310/m-rogalski">m.rogalski</a> <span dir="ltr"><span title="2017-09-08 09:39:16Z" class="relativetime">Sep 8 '17 at 9:39</span></span>
+</h2>
+        <p>This question has been asked before and already has an answer. If those answers do not fully address your question, please <a href="/questions/ask">ask a new question</a>.</p>
+    </div>
+            </div>
+    
+    <div class="post-layout--right">
+	    <div id="comments-142863" class="comments js-comments-container  dno">
+                <ul class="comments-list js-comments-list"
+                        data-remaining-comments-count="0"
+                        data-canpost="false"
+                        data-cansee="true"
+                        data-comments-unavailable="false"
+                        data-addlink-disabled="true">
+
+                </ul>
+	    </div>
+
+        <div id="comments-link-142863" data-rep=50 data-anon=true>
+
+                <a class="js-add-link comments-link disabled-link "
+                   title="Use comments to ask for more information or suggest improvements. Avoid answering questions in comments."
+                   >add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href=# onclick=""></a>
+        </div>         
+    </div>        </div>
+</div>
+
+            <div id="answers">
+
+                <a name="tab-top"></a>
+                <div id="answers-header">
+                    <div class="subheader answers-subheader">
+                        <h2 data-answercount="4">
+                                4 Answers
+                                <span style="display:none;" itemprop="answerCount">4</span>
+                        </h2>
+                        <div>
+                            
+<div id="tabs">
+        <a href="/questions/142863/how-do-i-import-a-pre-existing-java-project-into-eclipse-and-get-up-and-running?answertab=active#tab-top" data-nav-xhref="" title="Answers with the latest activity first" data-value="active" data-shortcut="A">
+            active</a>
+        <a href="/questions/142863/how-do-i-import-a-pre-existing-java-project-into-eclipse-and-get-up-and-running?answertab=oldest#tab-top" data-nav-xhref="" title="Answers in the order they were provided" data-value="oldest" data-shortcut="O">
+            oldest</a>
+        <a class="youarehere " href="/questions/142863/how-do-i-import-a-pre-existing-java-project-into-eclipse-and-get-up-and-running?answertab=votes#tab-top" data-nav-xhref="" title="Answers with the highest score first" data-value="votes" data-shortcut="V">
+            votes</a>
+    </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+  
+<a name="142881"></a>
+<div id="answer-142881" class="answer accepted-answer" data-answerid="142881"  itemscope itemtype="http://schema.org/Answer" itemprop="acceptedAnswer">
+    <div class="post-layout">
+            <div class="votecell post-layout--left">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="142881">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">19</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+        <span class="vote-accepted-on load-accepted-answer-date" title="loading when this answer was accepted...">accepted</span>
+
+</div>
+
+            </div>
+            
+
+
+<div class="answercell post-layout--right">
+    <div class="post-text" itemprop="text">
+<ol>
+<li><p>Create a new Java project in Eclipse.  This will create a src folder (to contain your source files).</p></li>
+<li><p>Also create a lib folder (the name isn't that important, but it follows standard conventions).</p></li>
+<li><p>Copy the <code>./com/*</code> folders into the <code>/src</code> folder (you can just do this using the OS, no need to do any fancy importing or anything from the Eclipse GUI).</p></li>
+<li><p>Copy any dependencies (<code>jar</code> files that your project itself depends on) into <code>/lib</code> (note that this <strong>should NOT</strong> include the <code>TGGL jar</code> - <em>thanks to commenter Mike Deck for pointing out my misinterpretation of the OPs post!</em>)</p></li>
+<li><p>Copy the other TGGL stuff into the root project folder (or some other folder dedicated to licenses that you need to distribute in your final app)</p></li>
+<li><p>Back in Eclipse, select the project you created in step 1, then hit the F5 key (this refreshes Eclipse's view of the folder tree with the actual contents.</p></li>
+<li><p>The content of the <code>/src</code> folder will get compiled automatically (with class files placed in the /bin file that Eclipse generated for you when you created the project).  <strong>If you have dependencies</strong> (which you don't in your current project, but I'll include this here for completeness), <strong>the compile will fail initially because you are missing the dependency <code>jar files</code> from the project classpath.</strong></p></li>
+<li><p>Finally, open the <code>/lib</code> folder in Eclipse, <code>right click</code> on each required <code>jar file</code> and choose <code>Build Path-&gt;Add</code> to build path.</p></li>
+</ol>
+
+<p>That will add that particular jar to the classpath for the project.  Eclipse will detect the change and automatically compile the classes that failed earlier, and you should now have an Eclipse project with your app in it.</p>
+    </div>
+    <div class="grid mb0 fw-wrap ai-start jc-end gs8 gsy">
+    <div class="grid--cell mr16" style="flex: 1 1 100px;">
+<div class="post-menu"><a href="/a/142881" title="short permalink to this answer" class="short-link" id="link-post-142881">share</a><span class="lsep">|</span><a href="/posts/142881/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </div>
+    <div class="post-signature grid--cell fl0">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="/posts/142881/revisions" title="show all edits to this post">edited <span title="2012-10-30 18:59:44Z" class="relativetime">Oct 30 '12 at 18:59</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/980524/wpp"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/b22e5a796f12aa2d867670e29c81a7bb?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/980524/wpp">wpp</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">4,248</span><span title="2 gold badges"><span class="badge1"></span><span class="badgecount">2</span></span><span title="21 silver badges"><span class="badge2"></span><span class="badgecount">21</span></span><span title="48 bronze badges"><span class="badge3"></span><span class="badgecount">48</span></span>
+        </div>
+    </div>
+</div>    </div>
+            
+
+
+    <div class="post-signature grid--cell fl0">
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2008-09-27 03:26:41Z" class="relativetime">Sep 27 '08 at 3:26</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/10973/kevin-day"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/6d8b216e6afd93a0bf480d3cb9fe9707?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/10973/kevin-day">Kevin Day</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 12,987" dir="ltr">13k</span><span title="4 gold badges"><span class="badge1"></span><span class="badgecount">4</span></span><span title="29 silver badges"><span class="badge2"></span><span class="badgecount">29</span></span><span title="54 bronze badges"><span class="badge3"></span><span class="badgecount">54</span></span>
+        </div>
+    </div>
+</div>
+    </div>
+    </div>
+</div>
+    
+    <div class="post-layout--right">
+	    <div id="comments-142881" class="comments js-comments-container ">
+                <ul class="comments-list js-comments-list"
+                        data-remaining-comments-count="0"
+                        data-canpost="false"
+                        data-cansee="true"
+                        data-comments-unavailable="false"
+                        data-addlink-disabled="true">
+
+
+
+    <li id="comment-39080" class="comment js-comment " data-comment-id="39080">
+        <div class="js-comment-actions comment-actions">
+            <div class="comment-score">
+            </div>
+                    </div>
+        <div class="comment-text js-comment-text-and-form">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">the TGGraphLayout.jar archive here isn&#39;t a dependency is just the compiled binary of the source that has been downloaded, therefore it doesn&#39;t need to be put into a lib directory and included on the build classpath.  In fact this could cause some very confusing behaviors in Eclipse.</span>
+                    &ndash;&nbsp;<a href="/users/1247/mike-deck"
+                       title="11,294 reputation"
+                       class="comment-user">Mike Deck</a>
+                <span class="comment-date" dir="ltr"><span title="2008-09-27 03:32:56Z" class="relativetime-clean">Sep 27 '08 at 3:32</span></span>
+                                                                            </div>
+        </div>
+    </li>
+    <li id="comment-4690305" class="comment js-comment " data-comment-id="4690305">
+        <div class="js-comment-actions comment-actions">
+            <div class="comment-score">
+            </div>
+                    </div>
+        <div class="comment-text js-comment-text-and-form">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Thanks! This solved my problem (similar).  I&#39;d like to add that if you get the error &quot;Failed to load main setting&quot; (or something similar). Be sure that the /src/ folder is THE source folder for that project.  You can right click /src/ and select -&gt; Use as Source Folder</span>
+                    &ndash;&nbsp;<a href="/users/402642/carlo-del-mundo"
+                       title="974 reputation"
+                       class="comment-user">Carlo del Mundo</a>
+                <span class="comment-date" dir="ltr"><span title="2010-11-30 20:02:26Z" class="relativetime-clean">Nov 30 '10 at 20:02</span></span>
+                                                                            </div>
+        </div>
+    </li>
+                </ul>
+	    </div>
+
+        <div id="comments-link-142881" data-rep=50 data-anon=true>
+
+                <a class="js-add-link comments-link disabled-link "
+                   title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."
+                   >add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href=# onclick=""></a>
+        </div>         
+    </div>    </div>
+</div>
+<div id="dfp-mlb" class="everyonelovesstackoverflow"></div>
+  
+<a name="4179201"></a>
+<div id="answer-4179201" class="answer" data-answerid="4179201"  itemscope itemtype="http://schema.org/Answer">
+    <div class="post-layout">
+            <div class="votecell post-layout--left">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="4179201">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">13</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </div>
+            
+
+
+<div class="answercell post-layout--right">
+    <div class="post-text" itemprop="text">
+<p>I think you'll have to import the project via the file->import wizard: </p>
+
+<p><a href="http://www.coderanch.com/t/419556/vc/Open-existing-project-Eclipse" rel="noreferrer">http://www.coderanch.com/t/419556/vc/Open-existing-project-Eclipse</a></p>
+
+<p>It's not the last step, but it will start you on your way.  </p>
+
+<p>I also feel your pain - there is really no excuse for making it so difficult to do a simple thing like opening an existing project.  I truly hope that the Eclipse designers focus on making the IDE simpler to use (tho I applaud their efforts at trying different approaches - but please, Eclipse designers, if you are listening, never complicate something simple).</p>
+    </div>
+    <div class="grid mb0 fw-wrap ai-start jc-end gs8 gsy">
+    <div class="grid--cell mr16" style="flex: 1 1 100px;">
+<div class="post-menu"><a href="/a/4179201" title="short permalink to this answer" class="short-link" id="link-post-4179201">share</a><span class="lsep">|</span><a href="/posts/4179201/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </div>
+            
+
+
+    <div class="post-signature grid--cell fl0">
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2010-11-14 19:25:42Z" class="relativetime">Nov 14 '10 at 19:25</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/427789/thotman"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/cd0237fab390d1347f560da56804bc7a?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/427789/thotman">Thotman</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">131</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="2 bronze badges"><span class="badge3"></span><span class="badgecount">2</span></span>
+        </div>
+    </div>
+</div>
+    </div>
+    </div>
+</div>
+    
+    <div class="post-layout--right">
+	    <div id="comments-4179201" class="comments js-comments-container ">
+                <ul class="comments-list js-comments-list"
+                        data-remaining-comments-count="0"
+                        data-canpost="false"
+                        data-cansee="true"
+                        data-comments-unavailable="false"
+                        data-addlink-disabled="true">
+
+
+
+    <li id="comment-4668933" class="comment js-comment " data-comment-id="4668933">
+        <div class="js-comment-actions comment-actions">
+            <div class="comment-score">
+                    <span title="number of &#39;useful comment&#39; votes received"
+                            class="cool">2</span>
+            </div>
+                    </div>
+        <div class="comment-text js-comment-text-and-form">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">I&#39;m not quite sure what the difference is, but I have imported two different projects in two different ways - one may work for you: a) use the File-&gt;Import-&gt;General-&gt;Existing Projects into Workspace and b) File-&gt;Import-&gt;General-&gt;File System.  Maybe one or the other may work for you.</span>
+                    &ndash;&nbsp;<a href="/users/427789/thotman"
+                       title="131 reputation"
+                       class="comment-user">Thotman</a>
+                <span class="comment-date" dir="ltr"><span title="2010-11-29 04:37:43Z" class="relativetime-clean">Nov 29 '10 at 4:37</span></span>
+                        <span class="edited-yes" title="this comment was edited 2 times"></span>
+                                                                            </div>
+        </div>
+    </li>
+                </ul>
+	    </div>
+
+        <div id="comments-link-4179201" data-rep=50 data-anon=true>
+
+                <a class="js-add-link comments-link disabled-link "
+                   title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."
+                   >add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href=# onclick=""></a>
+        </div>         
+    </div>    </div>
+</div>
+
+  
+<a name="142880"></a>
+<div id="answer-142880" class="answer" data-answerid="142880"  itemscope itemtype="http://schema.org/Answer">
+    <div class="post-layout">
+            <div class="votecell post-layout--left">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="142880">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">11</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </div>
+            
+
+
+<div class="answercell post-layout--right">
+    <div class="post-text" itemprop="text">
+<p>This assumes Eclipse and an appropriate JDK are installed on your system</p>
+
+<ol>
+<li>Open Eclipse and create a new Workspace by specifying an empty directory.</li>
+<li>Make sure you're in the Java perspective by selecting Window -> Open Perspective ..., select Other... and then Java</li>
+<li>Right click anywhere in the Package Explorer pane and select New -> Java Project</li>
+<li>In the dialog that opens give the project a name and then click the option that says "Crate project from existing sources."</li>
+<li>In the text box below the option you selected in Step 4 point to the root directory where you checked out the project.  This should be the directory that contains "com"</li>
+<li>Click Finish.  For this particular project you don't need to do any additional setup for your classpath since it only depends on classes that are part of the Java SE API.</li>
+</ol>
+    </div>
+    <div class="grid mb0 fw-wrap ai-start jc-end gs8 gsy">
+    <div class="grid--cell mr16" style="flex: 1 1 100px;">
+<div class="post-menu"><a href="/a/142880" title="short permalink to this answer" class="short-link" id="link-post-142880">share</a><span class="lsep">|</span><a href="/posts/142880/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </div>
+            
+
+
+    <div class="post-signature grid--cell fl0">
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2008-09-27 03:25:45Z" class="relativetime">Sep 27 '08 at 3:25</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/1247/mike-deck"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/300b7053db5618b12cca22ba85652c95?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/1247/mike-deck">Mike Deck</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 11,294" dir="ltr">11.3k</span><span title="14 gold badges"><span class="badge1"></span><span class="badgecount">14</span></span><span title="55 silver badges"><span class="badge2"></span><span class="badgecount">55</span></span><span title="85 bronze badges"><span class="badge3"></span><span class="badgecount">85</span></span>
+        </div>
+    </div>
+</div>
+    </div>
+    </div>
+</div>
+    
+    <div class="post-layout--right">
+	    <div id="comments-142880" class="comments js-comments-container  dno">
+                <ul class="comments-list js-comments-list"
+                        data-remaining-comments-count="0"
+                        data-canpost="false"
+                        data-cansee="true"
+                        data-comments-unavailable="false"
+                        data-addlink-disabled="true">
+
+                </ul>
+	    </div>
+
+        <div id="comments-link-142880" data-rep=50 data-anon=true>
+
+                <a class="js-add-link comments-link disabled-link "
+                   title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."
+                   >add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href=# onclick=""></a>
+        </div>         
+    </div>    </div>
+</div>
+
+  
+<a name="11733990"></a>
+<div id="answer-11733990" class="answer" data-answerid="11733990"  itemscope itemtype="http://schema.org/Answer">
+    <div class="post-layout">
+            <div class="votecell post-layout--left">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="11733990">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">6</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </div>
+            
+
+
+<div class="answercell post-layout--right">
+    <div class="post-text" itemprop="text">
+<p>In the menu go to :
+- File
+- Import
+- as the filter select 'Existing Projects into Workspace'
+- click next
+- browse to the project directory at 'select root directory'
+- click on 'finish'</p>
+    </div>
+    <div class="grid mb0 fw-wrap ai-start jc-end gs8 gsy">
+    <div class="grid--cell mr16" style="flex: 1 1 100px;">
+<div class="post-menu"><a href="/a/11733990" title="short permalink to this answer" class="short-link" id="link-post-11733990">share</a><span class="lsep">|</span><a href="/posts/11733990/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </div>
+            
+
+
+    <div class="post-signature grid--cell fl0">
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2012-07-31 05:55:57Z" class="relativetime">Jul 31 '12 at 5:55</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/1564812/hrqls"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/31ab76077cdeaa9544362df625c79d0e?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/1564812/hrqls">Hrqls</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">61</span><span title="1 silver badge"><span class="badge2"></span><span class="badgecount">1</span></span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
+        </div>
+    </div>
+</div>
+    </div>
+    </div>
+</div>
+    
+    <div class="post-layout--right">
+	    <div id="comments-11733990" class="comments js-comments-container  dno">
+                <ul class="comments-list js-comments-list"
+                        data-remaining-comments-count="0"
+                        data-canpost="false"
+                        data-cansee="true"
+                        data-comments-unavailable="false"
+                        data-addlink-disabled="true">
+
+                </ul>
+	    </div>
+
+        <div id="comments-link-11733990" data-rep=50 data-anon=true>
+
+                <a class="js-add-link comments-link disabled-link "
+                   title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."
+                   >add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href=# onclick=""></a>
+        </div>         
+    </div>    </div>
+</div>
+                
+
+
+                        <h2 class="bottom-notice" data-loc="1">
+Not the answer you&#39;re looking for?                            Browse other questions tagged <a href="/questions/tagged/java" class="post-tag" title="show questions tagged &#39;java&#39;" rel="tag">java</a> <a href="/questions/tagged/eclipse" class="post-tag" title="show questions tagged &#39;eclipse&#39;" rel="tag">eclipse</a>  or <a href="/questions/ask">ask your own question</a>.                        </h2>
+            </div>
+        </div>
+                <div id="sidebar" class="show-votes" role="complementary" aria-label="sidebar">
+                            <div class="module question-stats">
+                    <table id="qinfo">
+                        <tr>
+                            <td>
+                                <p class="label-key">asked</p>
+                            </td>
+                            <td style="padding-left: 10px">
+                                <p class="label-key" title="2008-09-27 03:16:56Z"><b>9 years, 5 months ago</b></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="label-key">viewed</p>
+                            </td>
+
+                            <td style="padding-left: 10px">
+                                <p class="label-key">
+                                    <b>144,788 times</b>
+                                </p>
+                            </td>
+                        </tr>
+                            <tr>
+                                <td>
+                                    <p class="label-key">active</p>
+                                </td>
+                                <td style="padding-left: 10px">
+                                    <p class="label-key"><b><a href="?lastactivity" class="lastactivity-link" title="2017-09-27 14:47:11Z">5 months ago</a></b></p>
+                                </td>
+                            </tr>
+                    </table>
+                </div>
+            <div class="module community-bulletin" data-tracker="cb=1">
+    <div class="related">
+                <div class="bulletin-title">
+                    Upcoming Events
+                </div>
+                <hr />
+    <div class="spacer bulletin-item-important">
+        
+    <div class="bulletin-item-type"><a href="https://stackoverflow.com/election" class="question-hyperlink" data-ga="[&quot;Community Bulletin Board&quot;,&quot;Upcoming Events&quot;,&quot;https://stackoverflow.com/election&quot;,null,null]"><div class="favicon favicon-stackoverflow" title="Stack Overflow"></div></a></div>
+    <div class="bulletin-item-content">
+        <a href="https://stackoverflow.com/election" class="question-hyperlink" data-ga="[&quot;Community Bulletin Board&quot;,&quot;Upcoming Events&quot;,&quot;https://stackoverflow.com/election&quot;,null,null]">2018 Community Moderator Election</a>
+        <div>ends <span title="2018-03-27 20:00:00Z" class="relativetime">in 7 days</span></div>
+    </div>
+    <br class="cbt" />
+</div>
+    </div>
+</div>            
+<div id="dfp-tsb" class="everyonelovesstackoverflow"></div>
+            <div id="hireme"></div>
+<script>;window.clc=window.clc||{},window.clc.init=window.clc.init||function(a){var b=window,c=b.document;try{if('function'!=typeof[].indexOf||!window.addEventListener||!a.allowed)return;var d=new RegExp(a.allowed);if(!d.test(location.hostname))return;if(b.clc.options)for(var e in b.clc.options)a[e]=b.clc.options[e];b.clc.cmd='undefined'==typeof b.clc.cmd?[]:b.clc.cmd,b.clc.autoload=b.clc.autoload||function(){'function'==typeof b.clc.load?b.clc.load():b.clc.cmd.push(function(a){a.load()})};var f=a.wv;if(c.hidden&&f)return void c.addEventListener('visibilitychange',function b(){c.hidden||(window.clc.init(a),c.removeEventListener('visibilitychange',b))});b.clc.options=a,a.al&&b.clc.autoload();var g=/Trident/i.test(navigator.userAgent)?a.lib.replace(/(\.min)?\.js(\?v=[0-9a-fA-F]+)?$/,'.ie$1.js$2'):a.lib,h=c.createElement('script');h.async=!0,h.src=g,c.body.appendChild(h)}catch(a){}},window.clc.loadDisplayAds=window.clc.loadDisplayAds||function(){function a(b){b.style.height=b.style.maxHeight=b.style.minHeight='auto',b.style.display='IFRAME'===b.tagName?'none':'block',[].forEach.call(b.children,a)}function b(a){new Image().src='https://'+e+'/stalled.gif?'+a}var c=window,d=c.document,e="clc.stackoverflow.com",f={slots:{lb:[[728,90]],mlb:[[728,90]],sb:[[300,250],[300,600]],"tag-sponsorship":[[730,135]]},ids:{"dfp-tlb":'lb',"dfp-mlb":'mlb',"dfp-tsb":'sb',"dfp-tag":'tag-sponsorship',"clc-tlb":'lb',"clc-mlb":'mlb',"clc-tsb":'sb'}},g=/^\/tags\//.test(location.pathname)||/^\/questions\/tagged\//.test(location.pathname)?'tag-pages':'question-pages',h=location.hostname;/^clc\./.test(location.hostname)&&(h='test/dev.stackoverflow.com');var i=[4385506061,4386578282,4386579572];return function(e){var j=(e&&0<e.length?e:Object.keys(f.ids)).map(function(a){return d.getElementById(a)}).filter(function(a){return!!a&&/^\s*$/.test(a.innerHTML)}).map(function(a){return a.id});if(0!==j.length){c.googletag=c.googletag||{},c.googletag.cmd=c.googletag.cmd||[],c.googletag.cmd.push(function(){var e=c.googletag,k=d.createElement('div');k.className='adsbox',k.id='clc-abd',k.style.position='absolute',k.style.pointerEvents='none',k.innerHTML='&nbsp;',d.body.appendChild(k);var l=e.pubads();l.enableSingleRequest(),l.addEventListener('slotRenderEnded',function(c){var e=c.serviceName,f=c.slot,g=c.lineItemId;try{var h=f.getSlotElementId(),j=[];h||j.push('id=0');var k=d.getElementById(h);if(!h||k?k.hasAttribute('data-clc-stalled')&&j.push('st=1'):j.push('el=0'),0!==j.length)return void b(j.join('&'));-1===i.indexOf(g)?k.setAttribute('data-clc-prefilled','true'):a(k),k.setAttribute('data-clc-ready','true')}catch(a){var l=d.getElementById('dfp-tsb')||d.getElementById('clc-tsb');l&&l.setAttribute('data-clc-ready','true'),b('e=1')}});var m=c.dfp_targeting||{};m&&Object.keys(m).forEach(function(a){l.setTargeting(a,m[a])});for(var n=0,o=j;n<o.length;n++){var p=o[n],q=f.ids[p],r=f.slots[q],s='/'+'248424177'+'/'+h+'/'+q+'/'+g,t=e.defineSlot(s,r,p);('tag-sponsorship'===q||'sb'==q)&&t.setCollapseEmptyDiv(!0,!0),t.addService(l),!1}e.enableServices();for(var p,u=0,v=j;u<v.length;u++)p=v[u],e.display(p)});var k=d.createElement('script');k.async=!0,k.src='https://www.googletagservices.com/tag/js/gpt.js',document.body.appendChild(k)}}}(),window.clc.init.call(null, {"lib":"https://cdn.sstatic.net/clc/clc.min.js?v=f8824d465ad6","style":"https://cdn.sstatic.net/clc/styles/clc.min.css?v=905391554886","u":"https://clc.stackoverflow.com/markup.js","wa":true,"kt":2000,"tto":true,"h":"clc.stackoverflow.com","allowed":"^(((talent\\.)?stackoverflow)|(blog\\.codinghorror)|(serverfault|askubuntu)|([^\\.]+\\.stackexchange))\\.com$","wv":true,"al":false});</script>            <script>
+window.clc_request='AgXW3mBijtUIAAAAAA8uAgACAAAAAgAAAAAOAAAAfGphdmF8ZWNsaXBzZXwAeWvPQz2pNWoQzA';                    clc.autoload();
+                var dfp_targeting={Registered:['false'],'so-tag':['java','eclipse']};                                    clc.loadDisplayAds();
+            </script>
+            <div class="module sidebar-linked">
+	<h4 id="h-linked">Linked</h4>
+	<div class="linked" data-tracker="lq=1">
+
+<div class="spacer">
+	<a href="/q/11983088" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">15</div>
+	</a>
+	<a href="/questions/11983088/how-to-import-a-java-project-to-eclipse?noredirect=1" class="question-hyperlink">How to import a Java project to Eclipse?</a>
+</div>
+<div class="spacer">
+	<a href="/q/43645468" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes  default">-1</div>
+	</a>
+	<a href="/questions/43645468/how-to-import-java-project-completely-in-eclipse?noredirect=1" class="question-hyperlink">How to import Java Project completely in Eclipse</a>
+</div>
+<div class="spacer">
+	<a href="/q/3549466" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes  default">3</div>
+	</a>
+	<a href="/questions/3549466/import-java-project-into-eclipse?noredirect=1" class="question-hyperlink">Import java project into eclipse</a>
+</div>
+<div class="spacer">
+	<a href="/q/7682532" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes  default">2</div>
+	</a>
+	<a href="/questions/7682532/java-makefile-to-eclipse-project?noredirect=1" class="question-hyperlink">Java makefile to eclipse project</a>
+</div>			</div>
+</div>
+
+                <div class="module sidebar-related">
+                    <h4 id="h-related">Related</h4>
+                    <div class="related js-gps-related-questions" data-tracker="rq=1">
+                        <div class="spacer"><a href="/q/285177" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted extra-large">1693</div></a><a href="/questions/285177/how-do-i-call-one-constructor-from-another-in-java" class="question-hyperlink">How do I call one constructor from another in Java?</a></div><div class="spacer"><a href="/q/316265" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted extra-large">1134</div></a><a href="/questions/316265/how-can-you-speed-up-eclipse" class="question-hyperlink">How can you speed up Eclipse?</a></div><div class="spacer"><a href="/q/363681" title="Vote score (upvotes - downvotes)"><div class="answer-votes extra-large">2753</div></a><a href="/questions/363681/how-do-i-generate-random-integers-within-a-specific-range-in-java" class="question-hyperlink">How do I generate random integers within a specific range in Java?</a></div><div class="spacer"><a href="/q/1200621" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted extra-large">1504</div></a><a href="/questions/1200621/how-do-i-declare-and-initialize-an-array-in-java" class="question-hyperlink">How do I declare and initialize an array in Java?</a></div><div class="spacer"><a href="/q/1678122" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted extra-large">1086</div></a><a href="/questions/1678122/must-override-a-superclass-method-errors-after-importing-a-project-into-eclips" class="question-hyperlink">&#39;Must Override a Superclass Method&#39; Errors after importing a project into Eclipse</a></div><div class="spacer"><a href="/q/3175035" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted large">629</div></a><a href="/questions/3175035/eclipse-find-in-project" class="question-hyperlink">Eclipse find in project?</a></div><div class="spacer"><a href="/q/3177733" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted extra-large">1482</div></a><a href="/questions/3177733/how-to-avoid-java-code-in-jsp-files" class="question-hyperlink">How to avoid Java code in JSP files?</a></div><div class="spacer"><a href="/q/3481828" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted extra-large">1181</div></a><a href="/questions/3481828/how-to-split-a-string-in-java" class="question-hyperlink">How to split a string in Java</a></div><div class="spacer"><a href="/q/5585779" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted extra-large">2355</div></a><a href="/questions/5585779/how-do-i-convert-a-string-to-an-int-in-java" class="question-hyperlink">How do I convert a String to an int in Java?</a></div><div class="spacer"><a href="/q/11461607" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted large">779</div></a><a href="/questions/11461607/cant-start-eclipse-java-was-started-but-returned-exit-code-13" class="question-hyperlink">Can&#39;t start Eclipse - Java was started but returned exit code=13</a></div>
+                    </div>
+                </div>
+
+<div id="hot-network-questions" class="module tex2jax_ignore">
+    <h4>
+        <a href="https://stackexchange.com/questions?tab=hot"
+           class="js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:1, location:11 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li >
+                <div class="favicon favicon-ell" title="English Language Learners Stack Exchange"></div><a href="https://ell.stackexchange.com/questions/160867/move-one-seat-right-or-move-to-one-seat-right-or-move-one-seat-to-right" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:481 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Move one seat right or Move to one seat right or Move one seat to right
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-movies" title="Movies &amp; TV Stack Exchange"></div><a href="https://movies.stackexchange.com/questions/87458/why-didnt-black-panther-ask-captain-america-for-help" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:367 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why didn&#39;t Black Panther ask Captain America for help?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-electronics" title="Electrical Engineering Stack Exchange"></div><a href="https://electronics.stackexchange.com/questions/363555/how-much-power-does-a-strain-gauge-use" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:135 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How much power does a strain gauge use?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-interpersonal" title="Interpersonal Skills Stack Exchange"></div><a href="https://interpersonal.stackexchange.com/questions/11871/how-to-tell-an-overweight-person-that-the-hike-will-be-too-hard" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:680 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How to tell an overweight person that the hike will be too hard?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-superuser" title="Super User"></div><a href="https://superuser.com/questions/1305911/is-there-any-harm-of-leaving-ethernet-outlet-unplugged" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:3 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is there any harm of leaving Ethernet outlet unplugged?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-expatriates" title="Expatriates Stack Exchange"></div><a href="https://expatriates.stackexchange.com/questions/13368/why-is-a-french-bank-asking-me-to-fill-out-a-w-9-form" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:546 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why is a French bank asking me to fill out a W-9 form?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="https://academia.stackexchange.com/questions/106731/should-a-graduating-doctoral-student-care-about-his-or-her-advisors-tenure-co" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:415 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Should a graduating doctoral student &quot;care&quot; about his or her advisor&#39;s tenure considerations?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-skeptics" title="Skeptics Stack Exchange"></div><a href="https://skeptics.stackexchange.com/questions/40925/is-rub-al-khali-the-largest-sand-desert-in-the-world" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:212 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is Rub&#39; al Khali the largest sand desert in the world?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="https://english.stackexchange.com/questions/437356/what-are-names-for-a-gold-diggers-man" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:97 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What are Names for a Gold Digger&#39;s Man?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-codegolf" title="Programming Puzzles &amp; Code Golf Stack Exchange"></div><a href="https://codegolf.stackexchange.com/questions/159629/does-it-lead-or-follow" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:200 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Does it Lead or Follow?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="https://rpg.stackexchange.com/questions/118751/can-control-flames-be-used-on-a-magically-lit-torch-to-burn-a-barn-down" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:122 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Can control flames be used on a magically lit torch to burn a barn down?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-salesforce" title="Salesforce Stack Exchange"></div><a href="https://salesforce.stackexchange.com/questions/212076/how-to-read-field-values-from-aggregateresult" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:459 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How to read field values from AggregateResult
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-writing" title="Writing Stack Exchange"></div><a href="https://writing.stackexchange.com/questions/34376/real-people-dont-make-good-fictional-characters-really-true" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:166 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    &quot;Real people don&#39;t make good fictional characters&quot;. Really true?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-worldbuilding" title="Worldbuilding Stack Exchange"></div><a href="https://worldbuilding.stackexchange.com/questions/107347/what-are-the-ley-lines-this-nomadic-people-uses-to-follow-the-same-path-year-aft" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:579 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What are the ley lines this nomadic people uses to follow the same path year after year?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-music" title="Music: Practice &amp; Theory Stack Exchange"></div><a href="https://music.stackexchange.com/questions/69071/is-it-ok-for-a-choir-to-learn-by-listening" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:240 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is it ok for a choir to learn by listening?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="https://academia.stackexchange.com/questions/106717/can-i-correct-a-typo-in-my-published-paper-if-it-doesnt-affect-content" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:415 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Can I correct a typo in my published paper if it doesn&#39;t affect content?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-interpersonal" title="Interpersonal Skills Stack Exchange"></div><a href="https://interpersonal.stackexchange.com/questions/11982/i-dreamed-you-did-so-and-so-why-did-you-do-that-how-to-react" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:680 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    I dreamed you did so and so. Why did you do that? - How to react?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-tex" title="TeX - LaTeX Stack Exchange"></div><a href="https://tex.stackexchange.com/questions/421982/alignment-of-isosceles-triangles-in-tikz" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:85 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Alignment of isosceles triangles in TikZ
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-worldbuilding" title="Worldbuilding Stack Exchange"></div><a href="https://worldbuilding.stackexchange.com/questions/107367/would-the-labyrinth-rule-work-in-n-dimensional-labyrinths-where-n-3" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:579 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Would the &quot;labyrinth-rule&quot; work in n-dimensional labyrinths (where n &gt; 3)?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-interpersonal" title="Interpersonal Skills Stack Exchange"></div><a href="https://interpersonal.stackexchange.com/questions/12043/how-can-i-politely-refuse-to-help-classmates-with-their-work" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:680 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How can I politely refuse to help classmates with their work?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-outdoors" title="The Great Outdoors Stack Exchange"></div><a href="https://outdoors.stackexchange.com/questions/18740/my-car-broke-down-in-siberia-what-do-i-do-now" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:395 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    My car broke down in Siberia. What do I do now?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-worldbuilding" title="Worldbuilding Stack Exchange"></div><a href="https://worldbuilding.stackexchange.com/questions/107409/how-would-a-creature-see-with-two-pupils-in-each-eye" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:579 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How would a creature see with two pupils in each eye?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-interpersonal" title="Interpersonal Skills Stack Exchange"></div><a href="https://interpersonal.stackexchange.com/questions/11853/my-fianc%c3%a9e-is-addicted-to-a-free-to-play-pay-to-win-game" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:680 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    My fianc&#233;e is addicted to a &quot;free-to-play&quot; (pay-to-win) game
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="https://math.stackexchange.com/questions/2699907/is-sum-of-numbered-balls-a-multiple-of-a-number" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:69 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Is sum of numbered balls a multiple of a number?
+                </a>
+
+            </li>
+    </ul>
+
+        <a href="#" 
+           class="show-more js-show-more js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:3, location:11 })">
+            more hot questions
+        </a>
+</div>
+
+        </div>
+    </div>
+<script>StackExchange.ready(function(){$.get('/posts/142863/ivc/0b48');});</script>
+<noscript><div><img src="/posts/142863/ivc/0b48" class="dno" alt="" width="0" height="0"></div></noscript><div style="display:none" id="prettify-lang">lang-java</div></div>
+
+
+        </div>
+    </div>
+
+    <footer id="footer" class="site-footer js-footer" role="contentinfo">
+        <div class="site-footer--container">
+                <div class="site-footer--logo">
+
+                    <a href="https://stackoverflow.com"><svg aria-hidden="true" class="svg-icon native iconLogoGlyphMd" width="32" height="37" viewBox="0 0 32 37"><g><path fill="#BCBBBB" d="M26 33v-9h4v13H0V24h4v9z"/><path d="M23.1 25.99l.68-2.95-16.1-3.35L7 23l16.1 2.99zM9.1 15.2l15 7 1.4-3-15-7-1.4 3zm4.2-7.4L26 18.4l2.1-2.5L15.4 5.3l-2.1 2.5zM21.5 0l-2.7 2 9.9 13.3 2.7-2L21.5 0zM7 30h16v-3H7v3z" fill="#F48024"/></g></svg></a>
+                </div>
+            
+            <nav class="site-footer--nav">
+                    <div class="site-footer--col site-footer--col__visible js-footer-col" data-name="default">
+                        <h5 class="-title"><a href="https://stackoverflow.com" class="js-gps-track" data-gps-track="footer.click({ location: 2, link: 15})">Stack Overflow</a></h5>
+                        <ul class="-list">
+                            <li class="-item"><a href="/questions" class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 16})">Questions</a></li>
+                                <li class="-item"><a href="https://stackoverflow.com/jobs" class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 17})">Jobs</a></li>
+                                <li class="-item"><a href="https://stackoverflow.com/jobs/directory/developer-jobs" class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 11})">Developer Jobs Directory</a></li>
+                                     <li class="-item"><a href="https://stackoverflow.com/jobs/salary" class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 28})">Salary Calculator</a></li>
+                                                            <li class="-item"><a href="/help" class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 3 })">Help</a></li>
+                                <li class="-item"><a onclick='StackExchange.switchMobile("on")' class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 12 })">Mobile</a></li>
+                        </ul>
+                    </div>
+                    <div class="site-footer--col site-footer--col__visible js-footer-col" data-name="default">
+                        <h5 class="-title"><a href="https://www.stackoverflowbusiness.com/?utm_source=so-footer&utm_medium=referral&utm_campaign=brand-activation&utm_term=sotob2b-footer-business-category" class="js-gps-track" data-gps-track="footer.click({ location: 2, link: 19 })">Stack Overflow<br /> Business</a></h5>
+                        <ul class="-list">
+                            <li class="-item"><a href="https://www.stackoverflowbusiness.com/talent?utm_source=so-footer&utm_medium=referral&utm_campaign=brand-activation&utm_term=sotob2b-footer-talent" class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 20 })">Talent</a></li>
+                            <li class="-item"><a href="https://www.stackoverflowbusiness.com/advertise?utm_source=so-footer&utm_medium=referral&utm_campaign=brand-activation&utm_term=sotob2b-footer-advertise" class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 21 })">Ads</a></li>
+                            <li class="-item"><a href="https://www.stackoverflowbusiness.com/enterprise?utm_source=so-footer&utm_medium=referral&utm_campaign=brand-activation&utm_term=sotob2b-footer-enterprise" class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 22 })">Enterprise</a></li>
+                        </ul>
+                    </div>
+                <div class="site-footer--col site-footer--col__visible js-footer-col" data-name="default">
+                    <h5 class="-title"><a class="js-gps-track" data-gps-track="footer.click({ location: 2, link: 1 })" href="https://stackoverflow.com/company/about">Company</a></h5>
+                    <ul class="-list">
+                            <li class="-item"><a class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 1 })" href="https://stackoverflow.com/company/about">About</a></li>
+                                                <li class="-item"><a class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 27 })" href="https://stackoverflow.com/company/press">Press</a></li>
+                            <li class="-item"><a class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 9 })" href="https://stackoverflow.com/company/work-here">Work Here</a></li>
+                        <li class="-item"><a class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 7 })" href="https://stackexchange.com/legal">Legal</a></li>
+                        <li class="-item"><a class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 8 })" href="https://stackexchange.com/legal/privacy-policy">Privacy Policy</a></li>
+                            <li class="-item"><a class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link: 13 })" href="https://stackoverflow.com/company/contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="site-footer--col site-footer--categories-nav site-footer--col__visible">
+                    <a href="#" class="site-footer--back js-footer-back"><svg aria-hidden="true" class="svg-icon iconArrowLeftAlt" width="18" height="18" viewBox="0 0 18 18"><path d="M10.58 16L12 14.59 6.4 9 12 3.41 10.57 2l-7 7z"/></svg></a>
+                    <div>
+                        <h5 class="-title"><a href="https://stackexchange.com">Stack Exchange<br> Network</a></h5>
+                        <ul class="-list">
+                            <li class="-item"><a href="#" class="-link _expandable js-footer-category-trigger js-gps-track" data-gps-track="footer.click({ location: 2, link: 24 })" data-target="Technology">Technology</a></li>
+                            <li class="-item"><a href="#" class="-link _expandable js-footer-category-trigger js-gps-track" data-gps-track="footer.click({ location: 2, link: 24 })" data-target="Life / Arts">Life / Arts</a></li>
+                            <li class="-item"><a href="#" class="-link _expandable js-footer-category-trigger js-gps-track" data-gps-track="footer.click({ location: 2, link: 24 })" data-target="Culture / Recreation">Culture / Recreation</a></li>
+                            <li class="-item"><a href="#" class="-link _expandable js-footer-category-trigger js-gps-track" data-gps-track="footer.click({ location: 2, link: 24 })" data-target="Science">Science</a></li>
+                            <li class="-item"><a href="#" class="-link _expandable js-footer-category-trigger js-gps-track" data-gps-track="footer.click({ location: 2, link: 24 })" data-target="Other">Other</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="site-footer--categories">
+                    <div class="site-footer--col site-footer--category js-footer-col" data-name="Technology">
+        <ul class="-list">
+                <li class="-item"><a href="https://stackoverflow.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="professional and enthusiast programmers">Stack Overflow</a></li>
+                <li class="-item"><a href="https://serverfault.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="system and network administrators">Server Fault</a></li>
+                <li class="-item"><a href="https://superuser.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="computer enthusiasts and power users">Super User</a></li>
+                <li class="-item"><a href="https://webapps.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="power users of web applications">Web Applications</a></li>
+                <li class="-item"><a href="https://askubuntu.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="Ubuntu users and developers">Ask Ubuntu</a></li>
+                <li class="-item"><a href="https://webmasters.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="pro webmasters">Webmasters</a></li>
+                <li class="-item"><a href="https://gamedev.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="professional and independent game developers">Game Development</a></li>
+                    </ul></div><div class="site-footer--col site-footer--category js-footer-col" data-name="Technology"><ul class="-list">
+                <li class="-item"><a href="https://tex.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="users of TeX, LaTeX, ConTeXt, and related typesetting systems">TeX - LaTeX</a></li>
+                <li class="-item"><a href="https://softwareengineering.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="professionals, academics, and students working within the systems development life cycle">Software Engineering</a></li>
+                <li class="-item"><a href="https://unix.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="users of Linux, FreeBSD and other Un*x-like operating systems">Unix &amp; Linux</a></li>
+                <li class="-item"><a href="https://apple.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="power users of Apple hardware and software">Ask Different (Apple)</a></li>
+                <li class="-item"><a href="https://wordpress.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="WordPress developers and administrators">WordPress Development</a></li>
+                <li class="-item"><a href="https://gis.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="cartographers, geographers and GIS professionals">Geographic Information Systems</a></li>
+                <li class="-item"><a href="https://electronics.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="electronics and electrical engineering professionals, students, and enthusiasts">Electrical Engineering</a></li>
+                    </ul></div><div class="site-footer--col site-footer--category js-footer-col" data-name="Technology"><ul class="-list">
+                <li class="-item"><a href="https://android.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="enthusiasts and power users of the Android operating system">Android Enthusiasts</a></li>
+                <li class="-item"><a href="https://security.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="information security professionals">Information Security</a></li>
+                <li class="-item"><a href="https://dba.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="database professionals who wish to improve their database skills and learn from others in the community">Database Administrators</a></li>
+                <li class="-item"><a href="https://drupal.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="Drupal developers and administrators">Drupal Answers</a></li>
+                <li class="-item"><a href="https://sharepoint.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="SharePoint enthusiasts">SharePoint</a></li>
+                <li class="-item"><a href="https://ux.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="user experience researchers and experts">User Experience</a></li>
+                <li class="-item"><a href="https://mathematica.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="users of Wolfram Mathematica">Mathematica</a></li>
+                    </ul></div><div class="site-footer--col site-footer--category js-footer-col" data-name="Technology"><ul class="-list">
+                <li class="-item"><a href="https://salesforce.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="Salesforce administrators, implementation experts, developers and anybody in-between">Salesforce</a></li>
+                <li class="-item"><a href="https://expressionengine.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="administrators, end users, developers and designers for ExpressionEngine&#174; CMS">ExpressionEngine&#174; Answers</a></li>
+                <li class="-item"><a href="https://pt.stackoverflow.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="programadores profissionais e entusiastas">Stack Overflow em Portugu&#234;s</a></li>
+                <li class="-item"><a href="https://blender.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="people who use Blender to create 3D graphics, animations, or games">Blender</a></li>
+                <li class="-item"><a href="https://networkengineering.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="network engineers">Network Engineering</a></li>
+                <li class="-item"><a href="https://crypto.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="software developers, mathematicians and others interested in cryptography">Cryptography</a></li>
+                <li class="-item"><a href="https://codereview.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="peer programmer code reviews">Code Review</a></li>
+                    </ul></div><div class="site-footer--col site-footer--category js-footer-col" data-name="Technology"><ul class="-list">
+                <li class="-item"><a href="https://magento.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="users of the Magento e-Commerce platform">Magento</a></li>
+                <li class="-item"><a href="https://softwarerecs.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="people seeking specific software recommendations">Software Recommendations</a></li>
+                <li class="-item"><a href="https://dsp.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="practitioners of the art and science of signal, image and video processing">Signal Processing</a></li>
+                <li class="-item"><a href="https://emacs.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="those using, extending or developing Emacs">Emacs</a></li>
+                <li class="-item"><a href="https://raspberrypi.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="users and developers of hardware and software for Raspberry Pi">Raspberry Pi</a></li>
+                <li class="-item"><a href="https://ru.stackoverflow.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="программистов">Stack Overflow на русском</a></li>
+                <li class="-item"><a href="https://codegolf.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="programming puzzle enthusiasts and code golfers">Programming Puzzles &amp; Code Golf</a></li>
+                    </ul></div><div class="site-footer--col site-footer--category js-footer-col" data-name="Technology"><ul class="-list">
+                <li class="-item"><a href="https://es.stackoverflow.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="programadores y profesionales de la inform&#225;tica">Stack Overflow en espa&#241;ol</a></li>
+                <li class="-item"><a href="https://ethereum.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="users of Ethereum, the decentralized application platform and smart contract enabled blockchain">Ethereum</a></li>
+                <li class="-item"><a href="https://datascience.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="Data science professionals, Machine Learning specialists, and those interested in learning more about the field">Data Science</a></li>
+                <li class="-item"><a href="https://arduino.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="developers of open-source hardware and software that is compatible with Arduino">Arduino</a></li>
+                <li class="-item"><a href="https://bitcoin.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="Bitcoin crypto-currency enthusiasts">Bitcoin</a></li>
+                            <li class="-item">
+                    <a href="https://stackexchange.com/sites#technology" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 26 })">
+                        <strong>
+                            more (28)
+                        </strong>
+                    </a>
+                </li>
+        </ul>
+    </div>
+    <div class="site-footer--col site-footer--category js-footer-col" data-name="Life / Arts">
+        <ul class="-list">
+                <li class="-item"><a href="https://photo.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="professional, enthusiast and amateur photographers">Photography</a></li>
+                <li class="-item"><a href="https://scifi.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="science fiction and fantasy enthusiasts">Science Fiction &amp; Fantasy</a></li>
+                <li class="-item"><a href="https://graphicdesign.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="Graphic Design professionals, students, and enthusiasts">Graphic Design</a></li>
+                <li class="-item"><a href="https://movies.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="movie and tv enthusiasts">Movies &amp; TV</a></li>
+                <li class="-item"><a href="https://music.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="musicians, students, and enthusiasts">Music: Practice &amp; Theory</a></li>
+                <li class="-item"><a href="https://worldbuilding.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="writers/artists using science, geography and culture to construct imaginary worlds and settings">Worldbuilding</a></li>
+                <li class="-item"><a href="https://cooking.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="professional and amateur chefs">Seasoned Advice (cooking)</a></li>
+                    </ul></div><div class="site-footer--col site-footer--category js-footer-col" data-name="Life / Arts"><ul class="-list">
+                <li class="-item"><a href="https://diy.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="contractors and serious DIYers">Home Improvement</a></li>
+                <li class="-item"><a href="https://money.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="people who want to be financially literate">Personal Finance &amp; Money</a></li>
+                <li class="-item"><a href="https://academia.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="academics and those enrolled in higher education">Academia</a></li>
+                <li class="-item"><a href="https://law.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="legal professionals, students, and others with experience or interest in law">Law</a></li>
+                            <li class="-item">
+                    <a href="https://stackexchange.com/sites#lifearts" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 26 })">
+                        <strong>
+                            more (15)
+                        </strong>
+                    </a>
+                </li>
+        </ul>
+    </div>
+    <div class="site-footer--col site-footer--category js-footer-col" data-name="Culture / Recreation">
+        <ul class="-list">
+                <li class="-item"><a href="https://english.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="linguists, etymologists, and serious English language enthusiasts">English Language &amp; Usage</a></li>
+                <li class="-item"><a href="https://skeptics.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="scientific skepticism">Skeptics</a></li>
+                <li class="-item"><a href="https://judaism.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="those who base their lives on Jewish law and tradition and anyone interested in learning more">Mi Yodeya (Judaism)</a></li>
+                <li class="-item"><a href="https://travel.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="road warriors and seasoned travelers">Travel</a></li>
+                <li class="-item"><a href="https://christianity.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="committed Christians, experts in Christianity and those interested in learning more">Christianity</a></li>
+                <li class="-item"><a href="https://ell.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="speakers of other languages learning English">English Language Learners</a></li>
+                <li class="-item"><a href="https://japanese.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="students, teachers, and linguists wanting to discuss the finer points of the Japanese language">Japanese Language</a></li>
+                    </ul></div><div class="site-footer--col site-footer--category js-footer-col" data-name="Culture / Recreation"><ul class="-list">
+                <li class="-item"><a href="https://gaming.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="passionate videogamers on all platforms">Arqade (gaming)</a></li>
+                <li class="-item"><a href="https://bicycles.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="people who build and repair bicycles, people who train cycling, or commute on bicycles">Bicycles</a></li>
+                <li class="-item"><a href="https://rpg.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="gamemasters and players of tabletop, paper-and-pencil role-playing games">Role-playing Games</a></li>
+                <li class="-item"><a href="https://anime.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="anime and manga fans">Anime &amp; Manga</a></li>
+                <li class="-item"><a href="https://puzzling.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="those who create, solve, and study puzzles">Puzzling</a></li>
+                <li class="-item"><a href="https://mechanics.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="mechanics and DIY enthusiast owners of cars, trucks, and motorcycles">Motor Vehicle Maintenance &amp; Repair</a></li>
+                            <li class="-item">
+                    <a href="https://stackexchange.com/sites#culturerecreation" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 26 })">
+                        <strong>
+                            more (33)
+                        </strong>
+                    </a>
+                </li>
+        </ul>
+    </div>
+    <div class="site-footer--col site-footer--category js-footer-col" data-name="Science">
+        <ul class="-list">
+                <li class="-item"><a href="https://mathoverflow.net" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="professional mathematicians">MathOverflow</a></li>
+                <li class="-item"><a href="https://math.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
+                <li class="-item"><a href="https://stats.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
+                <li class="-item"><a href="https://cstheory.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
+                <li class="-item"><a href="https://physics.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="active researchers, academics and students of physics">Physics</a></li>
+                <li class="-item"><a href="https://chemistry.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="scientists, academics, teachers and students">Chemistry</a></li>
+                <li class="-item"><a href="https://biology.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="biology researchers, academics, and students">Biology</a></li>
+                    </ul></div><div class="site-footer--col site-footer--category js-footer-col" data-name="Science"><ul class="-list">
+                <li class="-item"><a href="https://cs.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="students, researchers and practitioners of computer science">Computer Science</a></li>
+                <li class="-item"><a href="https://philosophy.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="those interested in the study of the fundamental nature of knowledge, reality, and existence">Philosophy</a></li>
+                            <li class="-item">
+                    <a href="https://stackexchange.com/sites#science" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 26 })">
+                        <strong>
+                            more (10)
+                        </strong>
+                    </a>
+                </li>
+        </ul>
+    </div>
+    <div class="site-footer--col site-footer--category js-footer-col" data-name="Other">
+        <ul class="-list">
+                <li class="-item"><a href="https://meta.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="meta-discussion of the Stack Exchange family of Q&amp;A websites">Meta Stack Exchange</a></li>
+                <li class="-item"><a href="https://stackapps.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="apps, scripts, and development with the Stack Exchange API">Stack Apps</a></li>
+                <li class="-item"><a href="https://api.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="programmatic interaction with Stack Exchange sites">API</a></li>
+                <li class="-item"><a href="https://data.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="querying Stack Exchange data using SQL">Data</a></li>
+                <li class="-item"><a href="https://area51.stackexchange.com" class="-link js-gps-track" data-gps-track="footer.click({ location: 0, link: 25 })" title="proposing new sites in the Stack Exchange network">Area 51</a></li>
+                    </ul>
+    </div>
+                </div>
+            </nav>
+            <div class="site-footer--copyright fs-fine">
+                <ul class="-list">
+                    <li class="-item"><a class="js-gps-track -link" data-gps-track="footer.click({ location: 2, link:4 })" href="https://stackoverflow.blog?blb=1">Blog</a></li>
+                    <li class="-item"><a href="https://www.facebook.com/officialstackoverflow/" class="-link">Facebook</a></li>
+                    <li class="-item"><a href="https://twitter.com/stackoverflow" class="-link">Twitter</a></li>
+                    <li class="-item"><a href="https://linkedin.com/company/stack-overflow" class="-link">LinkedIn</a></li>
+                </ul>
+
+                <p class="mt-auto mb24">
+site design / logo &#169; 2018 Stack Exchange Inc; user contributions licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a>
+                            with <a href="https://stackoverflow.blog/2009/06/25/attribution-required/" rel="license">attribution required</a>.
+                    <span id="svnrev">rev&nbsp;2018.3.19.29483</span>
+                </p>
+            </div>
+        </div>
+
+            </footer>
+    <noscript>
+        <div id="noscript-warning">Stack Overflow works best with JavaScript enabled
+            <img src="https://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno">
+        </div>
+    </noscript>
+
+<script>
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function() { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+            StackExchange.ready(function () {
+
+                var trackingCodes = [
+                    'UA-5620270-1'
+                ];
+
+                        trackingCodes.push('UA-108242619-1');
+
+                StackExchange.ga.init({
+                    sendTitles: true,
+                    tracker: window.ga,
+                    trackingCodes: trackingCodes
+                });
+
+
+
+                    StackExchange.ga.setDimension('dimension2', '|java|eclipse|');
+
+                    StackExchange.ga.setDimension('dimension3', 'Questions/Show');
+
+                StackExchange.ga.trackPageView();
+            });
+            
+/**/
+            
+            var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+            (function() {
+                var ssl = 'https:' == document.location.protocol,
+                    s = document.getElementsByTagName('script')[0],
+                    qc = document.createElement('script');
+                 qc.async = true;
+                    qc.src = (ssl ? 'https://secure' : 'http://edge') + '.quantserve.com/quant.js';
+                    s.parentNode.insertBefore(qc, s);
+                    _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+/**/
+                 var sc = document.createElement('script');
+                    sc.async = true;
+                    sc.src = (ssl ? 'https://sb' : 'http://b') + '.scorecardresearch.com/beacon.js';
+                    s.parentNode.insertBefore(sc, s);
+                    _comscore.push({ c1: "2", c2: "17440561" });
+            })();
+            
+
+</script>
+        
+    
+    </body>
+</html>
