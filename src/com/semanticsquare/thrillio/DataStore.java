@@ -30,8 +30,8 @@ public class DataStore {
 	public static void loadData(){
 		loadUsers();
 		loadWeblinks();
-		loadBooks();
 		loadMovies();
+		loadBooks();
 	}
 	public static void loadUsers() {
 //		users[0] = UserManager.getInstance().createUser(1000, "user0@semanticsquare.com", "test", "John", "M", Gender.MALE, UserType.USER);
